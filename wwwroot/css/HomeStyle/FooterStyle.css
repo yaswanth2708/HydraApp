@@ -1,0 +1,48 @@
+﻿/* style.css */
+footer {
+    background-color: #2C2A29;
+    padding: 50px;
+    text-align: center;
+    border-top: 1px solid #ddd;
+    color: white;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    color: white;
+}
+
+.contact-info, .report-concerns {
+    flex: 1;
+    min-width: 200px;
+    color: white;
+}
+
+    .contact-info h2, .report-concerns h3, .report-concerns p, .contact-info p {
+        margin: 0;
+        color: white;
+    }
+
+.footer-note {
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: white;
+}
+
+    .footer-note p {
+        margin: 0;
+        color: white;
+    }
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+    a:hover {
+        text-decoration: underline;
+        color: white;
+    }
