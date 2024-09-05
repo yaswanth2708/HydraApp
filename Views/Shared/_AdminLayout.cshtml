@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"] - Star</title>
+    <link rel="stylesheet" href="~/css/HomeStyle/StyleHomePage.css">
+</head>
+<body>
+    <header>
+        @await Html.PartialAsync("_AdminHeader")
+    </header>
+    <section class="hero">
+        <div class="hero-text">
+            <h1>@ViewData["HeroTitle"]</h1>
+        </div>
+    </section>
+    <section class="content">
+        @RenderBody()
+    </section>
+    <footer>
+        @await Html.PartialAsync("_Footer")
+    </footer>
+</body>
+</html>
