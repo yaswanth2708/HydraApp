@@ -1,0 +1,104 @@
+﻿body {
+    font-family: Arial, sans-serif;
+    /*background-color: #b3a474;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #EAE7DD
+    
+}
+.adminloginimg {
+    flex: 1; /* Image takes up 1 part of the space */
+    text-align: left; /* Align image to the left */
+    max-width: 50%; /* Optional: restrict the image container to half the width */
+}
+
+.adminloginimg img {
+    max-width: 100%; /* Ensure the image fits within its container */
+    height: auto;
+}
+
+.login-container {
+    width: 300px; /* Fixed width for the login form */
+    padding: 20px;
+  /*  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);*/
+   
+    text-align: center; /* Center-align the text within the form */
+    border-radius: 8px; /* Optional: Add rounded corners */
+    box-shadow: 0 0 10px rgb(37 35 35 / 10%);
+    shape-rendering: initial;
+    text-align: center;
+    border-radius: 30px;
+}
+
+.adminloginimg img {
+    max-width: 100%; /* Make sure the image doesn't overflow its container */
+    height: 400px;
+}
+.Admin-loginwrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space between to keep items separate */
+    padding: 20px;
+    max-width: 1200px; /* Optional: Set a max width for the wrapper */
+    margin: 0 auto; /* Center the wrapper on the page */
+}
+
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"] {
+   /* width: 100%;
+    padding: 10px;
+    box-sizing: border-box;*/
+    width: 100%;
+    padding: 8px 0; /* Padding to increase clickable area */
+    border: none; /* Remove default border */
+    border-bottom: 2px solid #ccc; /* Add bottom border for the line effect */
+    background: transparent; /* Make background transparent */
+    outline: none; /* Remove outline on focus */
+    transition: border-bottom-color 0.3s; /* Smooth transition for border color */
+}
+
+.login-button {
+    width: 100%;
+    padding: 10px;
+    background-color: black;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.login-button:hover {
+    background-color:  black;
+}
+
+.forgot-password {
+    margin-top: 10px;
+}
+
+.forgot-password a {
+    color: grey;
+    text-decoration: none;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}
