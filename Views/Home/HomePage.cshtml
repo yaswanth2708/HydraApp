@@ -1,63 +1,31 @@
-﻿<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Star</title>
-    <link rel="stylesheet" href="/css/HomeStyle/StyleHomePage.css">
+﻿@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Home";
+    
+}
 
-</head>
-<body>
-    <div id="header"></div>
-    <section class="hero">
-        <div class="hero-text">
-            <h1></h1>
-        </div>
-    </section>
-
-    <section class="content">
-        <div class="breadcrumb">
-            <a href="#">Star</a> > <a href="#">Why we need to be sustainable</a>
-        </div>
-        <h2>Why we need to be sustainable</h2>
-        <p>
-            As an aquaculture feed company with a global presence, Star is ideally positioned to contribute towards
-            the development of more sustainable food production. By 2050, the world population will have grown to almost
-            10 billion people. At the same time, increased urbanisation and income growth are changing dietary preferences
-            and increasing the demand for animal proteins. Through our purpose of feeding the future, we are committed to
-            producing feeds that provide food security in a sustainable way. At Star, we have a strong focus on reducing
-            our environmental footprint and increasing our positive social impact. Our objectives are aligned with the
-            long-term goals of our strategy as well as the United Nations Sustainable Development Goals.
-        </p>
-        <p>
-            Given the scale of the sustainability challenges facing the world, it is impossible to achieve progress in isolation.
-            This can only be achieved if partnerships are formed between all segments of society including business, government,
-            NGOs, and communities. Collaboration is one of our company values at Star and Nutreco and this can be seen
-            through our long-term involvement in external partnerships and multistakeholder platforms. This includes our biannual
-            Agri and AquaVision conferences as well as the Pincoy Project in Chile, the Seafood Business Ocean Stewardship, and our
-            community development projects in Nigeria, Fjordfrende in Norway, and Aqua in Bocca in Italy, to name a few.
-        </p>
-        <a class="cta" href="#">READ OUR LATEST SUSTAINABILITY REPORT TO LEARN ABOUT SOME OF THESE INITIATIVES ➜</a>
-    </section>
-    <div id="footer"></div>
-
-    <script>
-        // Load header and footer content
-        document.addEventListener("DOMContentLoaded", function() {
-            fetch('NaviBar.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('header').innerHTML = data;
-                })
-                .catch(error => console.error('Error loading the header:', error));
-
-            fetch('../Footer.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('footer').innerHTML = data;
-                })
-                .catch(error => console.error('Error loading the footer:', error));
-        });
-    </script>
-</body>
-</html>
+<section class="content">
+    <div class="breadcrumb">
+        @* <img src="/images/StarImg.jpg" alt="Hero Image" class="hero-img"> *@
+        <a href="#">Star</a> > <a href="#">Why we need to be sustainable</a>
+    </div>
+    <h2>Why we need to be sustainable</h2>
+    <p>
+        As an aquaculture feed company with a global presence, Star is ideally positioned to contribute towards
+        the development of more sustainable food production. By 2050, the world population will have grown to almost
+        10 billion people. At the same time, increased urbanisation and income growth are changing dietary preferences
+        and increasing the demand for animal proteins. Through our purpose of feeding the future, we are committed to
+        producing feeds that provide food security in a sustainable way. At Star, we have a strong focus on reducing
+        our environmental footprint and increasing our positive social impact. Our objectives are aligned with the
+        long-term goals of our strategy as well as the United Nations Sustainable Development Goals.
+    </p>
+    <p>
+        Given the scale of the sustainability challenges facing the world, it is impossible to achieve progress in isolation.
+        This can only be achieved if partnerships are formed between all segments of society including business, government,
+        NGOs, and communities. Collaboration is one of our company values at Star and Nutreco and this can be seen
+        through our long-term involvement in external partnerships and multistakeholder platforms. This includes our biannual
+        Agri and AquaVision conferences as well as the Pincoy Project in Chile, the Seafood Business Ocean Stewardship, and our
+        community development projects in Nigeria, Fjordfrende in Norway, and Aqua in Bocca in Italy, to name a few.
+    </p>
+    <a class="cta" href="#">READ OUR LATEST SUSTAINABILITY REPORT TO LEARN ABOUT SOME OF THESE INITIATIVES ➜</a>
+</section>
