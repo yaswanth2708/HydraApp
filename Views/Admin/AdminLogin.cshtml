@@ -1,21 +1,22 @@
-﻿<!DOCTYPE html>
+﻿@{
+    ViewData["Title"] = "Admin Login";
+}
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>@ViewData["Title"]</title>
     <link rel="stylesheet" href="/css/AdminStyle/AdminLoginStyle.css">
 </head>
 <body>
-
-
-
     <div class="login-container">
-
         <div class="logo_add">
             <img src="/images/StarLogo.png" alt="starlogo.png">
         </div>
-        <form id="admin-login-form" action="/admin-dashboard.html" method="POST">
+        <form id="admin-login-form" action="/Admin/AdminLogin" method="POST">
+            @Html.AntiForgeryToken() <!-- Include anti-forgery token for security -->
             <div class="input-group">
                 <label for="username">Username</label>
                 <input type="text" id="username" name="username" required>
@@ -29,23 +30,13 @@
                 <a href="/Admin/ForgotPassword">Forgot Password</a>
             </div>
         </form>
+
+        @if (!string.IsNullOrEmpty(ViewBag.ErrorMessage))
+        {
+            <div class="error-message">
+                <p>@ViewBag.ErrorMessage</p>
+            </div>
+        }
     </div>
-    </div>
-
-
-    <script>
-        document.getElementById('admin-login-form').addEventListener('submit', function (event) {
-            event.preventDefault(); // Prevent the default form submission
-
-            const username = document.getElementById('username').value;
-            const password = document.getElementById('password').value;
-
-            if (username === 'admin' && password === '1234') { // Simple check for demonstration
-                window.location.href = '/Admin/AdminHomePage'; // Redirect to dashboard
-            } else {
-                alert('Invalid username or password');
-            }
-        });
-    </script>
 </body>
 </html>
